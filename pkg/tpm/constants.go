@@ -160,17 +160,18 @@ const HCRTM string = "HCRTM"
 type FirmwareType string
 
 // TXT TPM1.2 log container signature
-const Txt12EvtLogSignature "TXT Event Container\0"
+const Txt12EvtLogSignature = "TXT Event Container\000"
 
 // TXT TPM1.2 log versions
 const (
-	Txt12EvtLog_Cntnr_Major_Ver 1
-	Txt12EvtLog_Cntnr_Minor_Ver 0
-	Txt12EvtLog_Evt_Major_Ver 1
-	Txt12EvtLog_Evt_Minor_Ver 0
+	Txt12EvtLog_Cntnr_Major_Ver = 1
+	Txt12EvtLog_Cntnr_Minor_Ver = 0
+	Txt12EvtLog_Evt_Major_Ver   = 1
+	Txt12EvtLog_Evt_Minor_Ver   = 0
 )
 
 type Txt12EvtType uint32
+
 const (
 	Txt12EvTypeBase = iota + 0x400
 	Txt12EvTypePcrMapping
@@ -188,6 +189,7 @@ const (
 )
 
 type Txt20EvtType uint32
+
 const (
 	Txt20EvTypeBase = iota + 0x400
 	Txt20EvTypePcrMapping

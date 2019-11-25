@@ -3,10 +3,10 @@ package tpmtool
 import (
 	"crypto/rand"
 	"encoding/hex"
-	"log"
+	// "log"
 	"os"
 	"os/exec"
-	"os/user"
+	// "os/user"
 	"path"
 	"path/filepath"
 	"syscall"
@@ -30,6 +30,7 @@ var (
 	TmpfsFsOptions string
 )
 
+/*
 func init() {
 	processUser, err := user.Current()
 	if err != nil {
@@ -38,6 +39,7 @@ func init() {
 
 	TmpfsFsOptions = path.Join("rw,size=1M,nr_inodes=5k,noexec,nodev,nosuid,uid=", processUser.Uid, ",gid=", processUser.Gid, ",mode=1700")
 }
+*/
 
 // MountKeystore mounts the tmpfs key store
 func MountKeystore() (string, error) {
